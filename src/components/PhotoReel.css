@@ -1,0 +1,104 @@
+.photo-reel-container {
+  background-color: #000;
+  padding: 80px 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.reel-row {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 100px;
+}
+
+.reel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+/* Card styles */
+.reel-card {
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Sizes */
+.reel-card.small {
+  width: 500px;
+  height: 600px;
+}
+.reel-card.large {
+  width: 960px;
+  height: 600px;
+}
+
+/* Media container inside card */
+.media-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.media-container iframe.media {
+  width: 90%;
+  height: 80%;
+}
+
+/* Caption BELOW card */
+.caption {
+  margin-top: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  width: 100%;
+}
+.caption strong {
+  color: white;
+}
+
+/* Gradients */
+.gradient-orange {
+  background: linear-gradient(135deg, #f09433, #dc2743);
+}
+.gradient-blue {
+  background: linear-gradient(135deg, #7F00FF, #4C00FF);
+}
+
+/* Responsive spacing */
+@media (max-width: 1000px) {
+  .reel-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 120px;
+  }
+
+  .reel-card.small {
+    width: 80vw;
+    height: auto;
+  }
+
+  .reel-card.large {
+    width: 90vw;
+    height: auto;
+  }
+}
