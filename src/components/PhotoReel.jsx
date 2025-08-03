@@ -3,7 +3,7 @@ import './PhotoReel.css';
 
 const projects = [
   {
-    image: '/imgs/new-york-portrait.jpg',
+    image: `/collin-portfolio/imgs/new-york-portrait.jpg`,
     title: 'Photo Example 1',
     caption: 'New York Life',
     gradientClass: 'gradient-orange',
@@ -17,14 +17,14 @@ const projects = [
     size: 'large',
   },
   {
-    image: '/imgs/taiwan-landscape.jpg',
+    image: '/collin-portfolio/imgs/taiwan-landscape.jpg',
     title: 'Photo Example 2',
     caption: 'The Vibrance of Taiwan',
     gradientClass: 'gradient-blue',
     size: 'large',
   },
   {
-    image: '/imgs/selfie-portrait.jpg',
+    image: '/collin-portfolio/imgs/selfie-portrait.jpg',
     title: 'Photo Example 3',
     caption: 'Selfie Time',
     gradientClass: 'gradient-orange',
@@ -53,7 +53,9 @@ const PhotoReel = () => {
 
     // Ensure YouTube API is ready by sending 'listening' message
     const handleApiReady = () => {
+      const iframeWindow = iframe.contentWindow;
       iframe.contentWindow.postMessage('{"event":"listening","id":1}', '*');
+      iframeWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
     };
 
     iframe.addEventListener('load', handleApiReady);
