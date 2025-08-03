@@ -1,6 +1,8 @@
 import React from 'react';
 import './Hero.css';
 
+const BASE_PATH = import.meta.env.BASE_URL;
+
 const Hero = () => {
   return (
     <section className="hero">
@@ -13,7 +15,7 @@ const Hero = () => {
         <div className="info">
           <div className="info-block">
             <div>
-              <img src="/collin-portfolio/icons/video-camera-white.svg" alt="camera white" className="icon" />
+              <img src={`${BASE_PATH}icons/video-camera-white.svg`}alt="camera white" className="icon" />
               <div className="label">Recent Experience</div>
               <div className="text">
                 Freelance Camera Operator and Broadcast Director
@@ -22,7 +24,7 @@ const Hero = () => {
           </div>
           <div className="info-block">
             <div>
-              <img src="/collin-portfolio/icons/location-white.svg" alt="location" className="icon" />
+              <img src={`${BASE_PATH}icons/location-white.svg`} alt="location" className="icon" />
               <div className="label">Location</div>
               <div className="text">Arcadia, California</div>
             </div>
@@ -31,7 +33,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-image">
-        <img src={"/collin-portfolio/imgs/taking-photo.jpg"} alt="Collin taking a video" />
+        <img src={`${BASE_PATH}imgs/taking-photo.jpg`} alt="Collin taking a video" />
       </div>
     </section>
   );

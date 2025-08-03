@@ -1,9 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import './PhotoReel.css';
 
+const BASE_PATH = import.meta.env.BASE_URL;
+
 const projects = [
   {
-    image: `/collin-portfolio/imgs/new-york-portrait.jpg`,
+    image: `${BASE_PATH}imgs/new-york-portrait.jpg`,
     title: 'Photo Example 1',
     caption: 'New York Life',
     gradientClass: 'gradient-orange',
@@ -17,14 +19,14 @@ const projects = [
     size: 'large',
   },
   {
-    image: '/collin-portfolio/imgs/taiwan-landscape.jpg',
+    image: `${BASE_PATH}imgs/taiwan-landscape.jpg`,
     title: 'Photo Example 2',
     caption: 'The Vibrance of Taiwan',
     gradientClass: 'gradient-blue',
     size: 'large',
   },
   {
-    image: '/collin-portfolio/imgs/selfie-portrait.jpg',
+    image: `${BASE_PATH}imgs/selfie-portrait.jpg`,
     title: 'Photo Example 3',
     caption: 'Selfie Time',
     gradientClass: 'gradient-orange',
